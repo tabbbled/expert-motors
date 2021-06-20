@@ -113,6 +113,6 @@ export async function getStaticPaths() {
     })
     return {
         paths: services,
-        fallback: false
+        fallback: "blocking"
     };
 }
