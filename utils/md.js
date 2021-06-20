@@ -3,7 +3,10 @@ export default function md(data) {
     let previous = "none";
 
     let trans = (str) => {
-        return str.replaceAll("**", "");
+        if (str && str.length > 0 && typeof str === "string") {
+            return str.replace(/\**/g, "");
+        }
+
     }
 
     data.split('\n').map((item) => {
